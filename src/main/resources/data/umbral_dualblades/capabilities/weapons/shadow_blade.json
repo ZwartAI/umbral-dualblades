@@ -1,0 +1,16 @@
+{
+  "type": "epicfight:sword",
+  "attributes": {
+    "common": {
+      "armor_negation": 20.0,
+      "impact": 1.2,
+      "max_strikes": 2,
+      "speed_bonus": 0.35
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [0.0, 0.0, -0.85],
+    "size": [0.55, 0.55, 1.15]
+  }
+}

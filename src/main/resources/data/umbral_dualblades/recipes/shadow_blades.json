@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " ES",
+    "NSE",
+    "ON "
+  ],
+  "key": {
+    "E": { "item": "minecraft:echo_shard" },
+    "S": { "item": "minecraft:netherite_sword" },
+    "N": { "item": "minecraft:netherite_ingot" },
+    "O": { "item": "minecraft:crying_obsidian" }
+  },
+  "result": {
+    "item": "umbral_dualblades:shadow_blade",
+    "count": 2
+  }
+}

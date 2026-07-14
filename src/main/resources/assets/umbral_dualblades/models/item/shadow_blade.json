@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "umbral_dualblades:item/shadow_blade"
+  }
+}
