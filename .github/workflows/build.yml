@@ -1,1 +1,39 @@
+name: Build Umbral Dual Blades
 
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.8'
+
+      - name: Build and reobfuscate JAR
+        run: gradle clean build --stacktrace
+
+      - name: Upload compiled mod
+        uses: actions/upload-artifact@v4
+        with:
+          name: umbral-dualblades-0.1.0-forge-1.20.1
+          path: build/libs/*.jar
+          if-no-files-found: error
