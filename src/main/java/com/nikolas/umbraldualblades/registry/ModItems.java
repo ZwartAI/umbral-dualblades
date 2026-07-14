@@ -21,7 +21,7 @@ public final class ModItems {
             Tiers.NETHERITE,
             8,
             -1.2F,
-            new Item.Properties().durability(2460).fireResistant().stacksTo(1)
+            new Item.Properties().durability(2460).fireResistant()
         )
     );
 
